@@ -18,9 +18,21 @@ if(breadcrumb != null){
     console.log('Product: True')
 };
 
+
+
 function alignMenu(){
-var productTitle = document.querySelectorAll('h2.woocommerce-loop-product__title');
-productTitle.forEach((productTitle) =>{
-    productTitle.style.height = "140px"
+    var productTitle = document.querySelectorAll('h2.woocommerce-loop-product__title');
+    var productTitleHeight = document.querySelectorAll('h2.woocommerce-loop-product__title').clientHeight;
+    let titleList = []
+    productTitle.forEach((productTitle) =>{
+        titleList.push(productTitle.clientHeight)
+        console.log(productTitle.clientHeight)
 });
-};
+    var maxHeight = Math.max.apply(Math, titleList);
+    console.log(titleList);
+        productTitle.forEach((productTitle) =>{
+            productTitle.style.height = maxHeight + 'px'
+        })    
+    };
+alignMenu()
+
