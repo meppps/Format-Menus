@@ -1,4 +1,4 @@
-# Format-Menus
+# Format-Product-Menus
 
 WooCommece on Wordpress mis-aligns products vertically. Using some simple DOM-manipulation, this script loops through each product per-page 
 and finds the one with the largest height(clientheight), and matches all the products to the same height. This is useful because it 
